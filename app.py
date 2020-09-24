@@ -54,7 +54,7 @@ if st.button("Predict"):
     result = predict_color(Red, Green, Blue)
     st.success('The Color is {}!'.format(result))
 
-st.markdown(hide_st_style, unsafe_allow_html=True)
+#st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.sidebar.title("About")
 st.sidebar.info(
