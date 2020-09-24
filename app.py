@@ -6,8 +6,6 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-#print(tf.__version__)
-
 """## Loading Trained Model"""
 # Recreate the exact same model, including its weights and the optimizer
 model = tf.keras.models.load_model('colormodel_trained_90.h5') 
@@ -69,31 +67,23 @@ if st.button("Predict"):
     result = predict_color(Red, Green, Blue)
     st.success('The Color is {}!'.format(result))
 
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
-if __name__ == "__main__":
-    hide_st_style = """
-        <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-        </style>
-    """
-    st.markdown(hide_st_style, unsafe_allow_html=True)
+st.sidebar.title("About")
+st.sidebar.info(
+        "**RGB Color Classifier** can Predict upto 11 Distinct Color Classes based on the RGB input by User from the sliders\n\n"
+        "The 11 Classes are *Red, Green, Blue, Yellow, Orange, Pink, Purple, Brown, Grey, Black and White*\n\n"
+        "This app is created and maintained by "
+    )
+st.sidebar.title("Contribute")
+st.sidebar.info(
+    "You are very **Welcome** to contribute your awesome comments, questions or suggestions ")
+#st.title("RGB Color Classifier")
 
-    st.sidebar.title("About")
-    st.sidebar.info(
-            "**RGB Color Classifier** can Predict upto 11 Distinct Color Classes based on the RGB input by User from the sliders\n\n"
-            "The 11 Classes are *Red, Green, Blue, Yellow, Orange, Pink, Purple, Brown, Grey, Black and White*\n\n"
-            "This app is created and maintained by "
-        )
-    st.sidebar.title("Contribute")
-    st.sidebar.info(
-        "You are very **Welcome** to contribute your awesome comments, questions or suggestions ")
-    #st.title("RGB Color Classifier")
-    
-    # Render a gist
-    github_gist('tc87', '9382eafdb6eebde0bca0c33080d54b58')
+# Render a gist
+github_gist('tc87', '9382eafdb6eebde0bca0c33080d54b58')
 
-    #st.markdown(title_html, unsafe_allow_html=True) #Title rendering
+#st.markdown(title_html, unsafe_allow_html=True) #Title rendering
 
 
 
