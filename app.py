@@ -41,17 +41,6 @@ def display_image():
     img = ImageOps.expand(img, border=1, fill='black')  # border to the img
     st.image(img, caption='RGB Color')
 
-import streamlit.components.v1 as components
-def github_gist(gist_creator, gist_id, height=600, scrolling=True):
-    components.html(
-        f"""
-    <script src="https://gist.github.com/{gist_creator}/{gist_id}.js">
-    </script>
-    """,
-        height=height,
-        scrolling=scrolling,
-    )
-
 st.header("Select RGB values")
 
 Red = st.slider( label="RED value: ", min_value=0, max_value=255, value=0, key="red")
@@ -78,10 +67,6 @@ st.sidebar.info(
     "You are very **Welcome** to contribute your awesome comments, questions or suggestions ")
 #st.title("RGB Color Classifier")
 
-# Render a gist
-github_gist('tc87', '9382eafdb6eebde0bca0c33080d54b58')
-
-#st.markdown(title_html, unsafe_allow_html=True) #Title rendering
 
 
 
