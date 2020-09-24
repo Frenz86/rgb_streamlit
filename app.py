@@ -1,10 +1,8 @@
 import numpy as np
 import streamlit as st
-import PIL
-from PIL import Image, ImageOps
 import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras import layers
+from PIL import Image, ImageOps
+import PIL
 
 """## Loading Trained Model"""
 # Recreate the exact same model, including its weights and the optimizer
